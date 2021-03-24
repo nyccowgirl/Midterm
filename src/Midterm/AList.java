@@ -224,13 +224,13 @@ public class AList<T extends Comparable<? super T>> implements ListInterface<T> 
 	}
 
 	public void addToFront(ANode<T> first) {
-		ANode current = first;
+		ANode<T> current = first;
 		int index = 1;
 
 		// Non-linear solution:
 
 //		while (current != null) {
-//			add(index, (T) current.data);				// makeRoom is O(n) -> O(n^2) total
+//			add(index, current.data);									// makeRoom is O(n) -> O(n^2) total
 //			current = current.next;
 //			index++;
 //		}
@@ -256,7 +256,7 @@ public class AList<T extends Comparable<? super T>> implements ListInterface<T> 
 		// Make room in list
 		int lastIndex = numberOfEntries;
 
-		for (int i = numberOfEntries; i >= 1; i--) {		// O(1)
+		for (int i = numberOfEntries; i >= 1; i--) {					// O(n)
 			if (lastIndex >= 1) {
 				list[lastIndex + count] = list[lastIndex];
 				lastIndex--;
@@ -267,8 +267,8 @@ public class AList<T extends Comparable<? super T>> implements ListInterface<T> 
 		current = first;
 
 		// Add elements from chain at first node to beginning of list:
-		for (int j = 1; j <= count; j++) {		// O(1)
-			list[j] = (T) current.data;
+		for (int j = 1; j <= count; j++) {								// O(1)
+			list[j] = current.data;
 			current = current.next;
 		}
 	}
