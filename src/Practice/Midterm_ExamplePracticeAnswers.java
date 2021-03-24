@@ -1,3 +1,5 @@
+package Practice;
+
 @SuppressWarnings({"unchecked", "rawtypes"})
 public class Midterm_ExamplePracticeAnswers {
 	// NOTE: In this code, I sometimes used unparameterized (raw) bags and lists. Other times, I use
@@ -9,7 +11,7 @@ public class Midterm_ExamplePracticeAnswers {
 	/* CLIENT LEVEL CODE */
 	
 	public static ListInterface mergeListInterface(ListInterface listA, ListInterface listB) {
-		ListInterface mergeList = new AList(); // or LList
+		ListInterface mergeList = new AList(); // or Practice.LList
 		
 		int i, j;
 		for(i=1, j=1; i<=listA.getLength() && j<=listB.getLength(); i++, j++) {
@@ -28,7 +30,7 @@ public class Midterm_ExamplePracticeAnswers {
 	}
 	
 	public static BagInterface<Integer> mergeBagInterfaces(BagInterface<Integer> bagA, BagInterface<Integer> bagB) {
-		BagInterface<Integer> mergeBag = new LinkedBag<Integer>(); // or these could be ArrayBag
+		BagInterface<Integer> mergeBag = new LinkedBag<Integer>(); // or these could be Practice.ArrayBag
 		BagInterface<Integer> copyBagA = new LinkedBag<Integer>();
 		BagInterface<Integer> copyBagB = new LinkedBag<Integer>();
 		
@@ -71,7 +73,7 @@ public class Midterm_ExamplePracticeAnswers {
 
 	public static int getSize(BagInterface bag) {
 		int size = 0;
-		BagInterface copyBag = new ArrayBag(); // or LinkedBag
+		BagInterface copyBag = new ArrayBag(); // or Practice.LinkedBag
 		while(!bag.isEmpty()) {
 			copyBag.add(bag.remove());
 			size++;

@@ -1,3 +1,5 @@
+package Practice;
+
 /**
  * A linked implementation of the ADT list.
  * 
@@ -231,7 +233,7 @@ public class LList<T extends Comparable<? super T>> implements ListInterface<T> 
 	
 	public LList<T> getAllLessThan(T target) {
 		LList<T> lessThanList = new LList<T>();
-		// Node currentLessThan = lessThanList.firstNode;
+		// Practice.Node currentLessThan = lessThanList.firstNode;
 		
 		Node current = firstNode;
 		
@@ -288,5 +290,5 @@ public class LList<T extends Comparable<? super T>> implements ListInterface<T> 
 		private void setNextNode(Node nextNode) {
 			next = nextNode;
 		} 
-	} // end Node
+	} // end Practice.Node
 } 

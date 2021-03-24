@@ -1,3 +1,5 @@
+package Practice;
+
 public class Node<T> {
 	
 	// public for testing purposes only!!

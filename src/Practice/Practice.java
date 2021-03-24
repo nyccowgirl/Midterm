@@ -1,3 +1,5 @@
+package Practice;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -89,7 +91,7 @@ public class Practice {
         list2.add(8);
         list2.add(10);
 
-//        ListInterface list3 = Midterm_ExamplePracticeAnswers.mergeListInterface(list1, list2);
+//        Practice.ListInterface list3 = Practice.Midterm_ExamplePracticeAnswers.mergeListInterface(list1, list2);
 
 //        System.out.println(Arrays.toString(list3.toArray()));       // [1, 4, 2, 6, 3, 8, 10]
 
@@ -128,10 +130,10 @@ public class Practice {
         /*
          list: 4 -> 6 -> 10 -> 12
 
-        Node nodeA = list.firstNode.next.next;
-        Node nodeB = list.firstNode.next;
-        Node nodeC = list.firstNode.next.next.next;
-        Node nodeD = nodeC.next;
+        Practice.Node nodeA = list.firstNode.next.next;
+        Practice.Node nodeB = list.firstNode.next;
+        Practice.Node nodeC = list.firstNode.next.next.next;
+        Practice.Node nodeD = nodeC.next;
 
         System.out.println(nodeA.data);                     // 10
         System.out.println(nodeB.data);                     // 6
@@ -140,12 +142,12 @@ public class Practice {
         System.out.println(mystery(list.firstNode, 9));     // false
         System.out.println(mystery(list.firstNode, 10));    // 6; true
 
-        public boolean mystery(Node firstNode, int target) {
-            Node currentNode = firstNode;
+        public boolean mystery(Practice.Node firstNode, int target) {
+            Practice.Node currentNode = firstNode;
             if(currentNode.next==null) {
                 return false;
             } else {
-                Node tmpNode = currentNode;
+                Practice.Node tmpNode = currentNode;
                 currentNode = currentNode.next;
                 while(currentNode!=null) {
                     if(currentNode.data==target) {
@@ -167,11 +169,11 @@ public class Practice {
         // Question 7:
 
         /*
-        Node firstNode = new Node(3);
-        firstNode.next = new Node(4);
-        firstNode.next.next = new Node(6);
-        firstNode.next.next.next new Node(8);
-        Node currentNode = firstNode;
+        Practice.Node firstNode = new Practice.Node(3);
+        firstNode.next = new Practice.Node(4);
+        firstNode.next.next = new Practice.Node(6);
+        firstNode.next.next.next new Practice.Node(8);
+        Practice.Node currentNode = firstNode;
 
         print currentNode.data                              // 3
         print the chain headed by firstNode                 // 3 -> 4 -> 6 -> 8
@@ -195,16 +197,16 @@ public class Practice {
 
         // Question 8:
         /*
-        ArrayBag: add/remove from end
-        LinkedBag: add/remove from beginning
-        AList: add/remove from end
-        LList: add/remove from end
+        Practice.ArrayBag: add/remove from end
+        Practice.LinkedBag: add/remove from beginning
+        Practice.AList: add/remove from end
+        Practice.LList: add/remove from end
 
-        ArrayBag: O(n)
-        LinkedBag: O(1)
+        Practice.ArrayBag: O(n)
+        Practice.LinkedBag: O(1)
 
-        AList: O(n) to add or remove from front; O(1) to add or remove from end
-        LList: O(1) to add or remove from front; O(n) to add or remove from end
+        Practice.AList: O(n) to add or remove from front; O(1) to add or remove from end
+        Practice.LList: O(1) to add or remove from front; O(n) to add or remove from end
 
         Bags are more efficient with linked since you don't care about order; but with lists, it depends on where you
         are adding/removing from.
